@@ -56,11 +56,8 @@ Santtu Salminen
 include "./main.php";
 ?>
 </script>
-<?php
-include "main.js";
-?>
 
-
+<script src="main.js"></script>
 
 <link href="/style.css" rel="stylesheet" type="text/css">
 <link href="style.css" rel="stylesheet" type="text/css">

@@ -1,4 +1,3 @@
-<script>
 var playhead = 0;
 var laskuri = 0;
 var a = 0;
@@ -198,4 +197,3 @@ function waitSeconds(iMilliSeconds) {
 }
 
 tekstiotsikko();
-</script>
