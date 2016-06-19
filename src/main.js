@@ -6,10 +6,14 @@ var soita = 0;
 var tef = 0;
 var raita = "audio0";
 var audio;
+// variable for  the button used to play and pause the audio
+var playButton;
 
 $( function () {
     audio = document.getElementById(raita);
     audio.src = bookcliptimesmp3[a];
+    // get button used to play and pause audio
+    playButton = $( '#playButton' );
     tekstiotsikko();
 });
 
@@ -73,7 +77,14 @@ function myFunction(){
 
  myFunctionstopped();
  };
-
+ 
+ // remove this method as the play button handler
+ playButton.off( 'click', myFunction  );
+ // add the method that pauses playback as the handler for play / pause button
+ playButton.on( 'click', myFunction3 );
+ // and change the button text
+ // todo this should use the localized text
+ playButton.html( 'pause' );
 }
 
 
@@ -81,7 +92,8 @@ function myFunction2(){
 	
 //audio = document.getElementById(raita);
 	
- audio.pause();
+ // pause audio and change the play / pause button to play button
+ myFunction3();
  soita = 0;
  //raita = "audio"+soita;
  tef = 0;
@@ -92,8 +104,13 @@ function myFunction2(){
 }
 
 function myFunction3(){
- audio = document.getElementById(raita);
  audio.pause();
+ // remove this method as the event handler for the play / pause utton
+ playButton.off( 'click', myFunction3 );
+ // add the method that starts playback as the event handler for the button
+ playButton.on( 'click', myFunction );
+ // change button text
+ playButton.html( 'play' );
 }
 
 function myFunctionseuraava() {
