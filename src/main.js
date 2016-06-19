@@ -5,12 +5,13 @@ var d = 1;
 var soita = 0;
 var tef = 0;
 var raita = "audio0";
-var audio = document.getElementById(raita);
-audio.src = bookcliptimesmp3[a];
+var audio;
 
-
-
-
+$( function () {
+    audio = document.getElementById(raita);
+    audio.src = bookcliptimesmp3[a];
+    tekstiotsikko();
+});
 
 function tekstiotsikko (){
 
@@ -195,5 +196,3 @@ function waitSeconds(iMilliSeconds) {
         counter = end - start;
     }
 }
-
-tekstiotsikko();
