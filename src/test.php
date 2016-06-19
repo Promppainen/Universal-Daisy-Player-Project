@@ -57,6 +57,7 @@ include "./main.php";
 ?>
 </script>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
 <script src="main.js"></script>
 
 <link href="/style.css" rel="stylesheet" type="text/css">
