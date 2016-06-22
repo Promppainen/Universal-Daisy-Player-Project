@@ -14,6 +14,8 @@ $( function () {
     audio.src = bookcliptimesmp3[a];
     // get button used to play and pause audio
     playButton = $( '#playButton' );
+    // set the play / pause button to play audio when clicked
+    playButton.on( 'click', myFunction );
     tekstiotsikko();
 });
 
