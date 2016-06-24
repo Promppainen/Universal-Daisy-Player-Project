@@ -229,7 +229,17 @@ echo "];";
 
 
 echo "var maxtitles = ".$maxtitle.";";
-
+echo "\r\n";
+// make javascript var table 
+// for button language from lang_ php ini file
+echo "var buttonTexts ={".
+"\"".$langprewsection."\""
+.",\"".$langprew."\""
+.",\"".$langplay."\"" 
+.",\"".$langstop."\"" 
+.",\"".$langpause."\"" 
+.",\"".$langnext."\"" 
+.",\"".$langnextsection."\"};";
 
 
 
