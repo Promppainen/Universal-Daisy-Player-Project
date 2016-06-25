@@ -9,6 +9,7 @@ var audio;
 // variable for  the button used to play and pause the audio
 var playButton;
 
+// the following is called when the document has been loaded i.e. we can start manipulating it
 $( function () {
     audio = document.getElementById(raita);
     audio.src = bookcliptimesmp3[a];
@@ -16,6 +17,9 @@ $( function () {
     playButton = $( '#playButton' );
     // set the play / pause button to play audio when clicked
     playButton.on( 'click', myFunction );
+    // set event handler for when a audio file is finished.
+    // the handler will make the audio element to play the next file
+    $( audio ).on( 'ended', myFunctionstopped );
     tekstiotsikko();
 });
 
@@ -75,10 +79,6 @@ function myFunction(){
  teksti();
  tekstitef();
  audio.play();
- audio.onended = function() {
-
- myFunctionstopped();
- };
  
  // remove this method as the play button handler
  // also possibly removes the pause event handler method which may be added otherwise multiple times when
