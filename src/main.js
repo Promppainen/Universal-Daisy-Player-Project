@@ -81,7 +81,9 @@ function myFunction(){
  };
  
  // remove this method as the play button handler
- playButton.off( 'click', myFunction  );
+ // also possibly removes the pause event handler method which may be added otherwise multiple times when
+ // this mehod is called when a new section is started
+ playButton.off( 'click' );
  // add the method that pauses playback as the handler for play / pause button
  playButton.on( 'click', myFunction3 );
  // and change the button text
@@ -106,8 +108,10 @@ function myFunction2(){
 
 function myFunction3(){
  audio.pause();
- // remove this method as the event handler for the play / pause utton
- playButton.off( 'click', myFunction3 );
+ // remove  all click event handlers  from play pause button
+ // this includes this method and possibly the play method which we want to make sure gets called only once when
+ // we next add it as the click event handler
+ playButton.off( 'click' );
  // add the method that starts playback as the event handler for the button
  playButton.on( 'click', myFunction );
  // change button text
