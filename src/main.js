@@ -85,8 +85,7 @@ function myFunction(){
  // add the method that pauses playback as the handler for play / pause button
  playButton.on( 'click', myFunction3 );
  // and change the button text
- // todo this should use the localized text
- playButton.html( 'pause' );
+ playButton.html( buttonTexts.pause );
 }
 
 
@@ -112,7 +111,7 @@ function myFunction3(){
  // add the method that starts playback as the event handler for the button
  playButton.on( 'click', myFunction );
  // change button text
- playButton.html( 'play' );
+ playButton.html( buttonTexts.play );
 }
 
 function myFunctionseuraava() {
