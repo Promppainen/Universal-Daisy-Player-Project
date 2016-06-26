@@ -22,6 +22,10 @@ Daisy 2.02 audio books with mp3 audio
 files. And the main goal is to make daisy books 
 available in developing countries.
 
+## Project status
+
+This project is in an early stage of development. The player is not yet considered stable and thus is not ready for real world use.
+
 ## License
 
 This program is free software: you can redistribute it and/or modify
