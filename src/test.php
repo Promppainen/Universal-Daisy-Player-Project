@@ -177,6 +177,14 @@ $go++; // lisätään yksi laskuriin
 
 </p>
 
+<h2>Playback speed</h2>
+
+<p>
+<input type="radio" name="speed" value="0.5">0.5<br>
+<input type="radio" name="speed" value="1.0" checked>1<br>
+<input type="radio" name="speed" value="1.5">1.5<br>
+<input type="radio" name="speed" value="2.0">2<br>
+</p>
 
 <audio id="audio0" ><source src="<?php echo $bookdir.$javascriptarraymp3[1];?>" type="audio/mpeg">y</audio>
 

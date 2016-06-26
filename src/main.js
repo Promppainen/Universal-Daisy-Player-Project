@@ -6,6 +6,8 @@ var soita = 0;
 var tef = 0;
 var raita = "audio0";
 var audio;
+// variable for the current playback speed
+var speed = 1.0;
 // variable for  the button used to play and pause the audio
 var playButton;
 
@@ -20,6 +22,8 @@ $( function () {
     // set event handler for when a audio file is finished.
     // the handler will make the audio element to play the next file
     $( audio ).on( 'ended', myFunctionstopped );
+    // set event handlers for the radio buttons used to change playback speed
+    $( ':radio[name=speed]' ).on( 'change', changeSpeed );
     tekstiotsikko();
 });
 
@@ -78,6 +82,10 @@ function myFunction(){
  tekstiotsikko();
  teksti();
  tekstitef();
+ 
+ // set playback speed always before starting to play since it is otherwise forgotten
+ // at least on Safari when a new file starts playing
+ audio.playbackRate = speed;
  audio.play();
  
  // remove this method as the play button handler
@@ -217,4 +225,12 @@ function waitSeconds(iMilliSeconds) {
         end = new Date().getTime();
         counter = end - start;
     }
+}
+
+// event handler when user changes playback speed with the radio buttons
+function changeSpeed() {
+    // get the speed from the radio button pressed
+    // it is used here and in the play event handler to ensure that the speed the user chose stays
+    speed = $( this ).val();
+    audio.playbackRate = speed;
 }
