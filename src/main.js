@@ -23,7 +23,7 @@ $( function () {
     // the handler will make the audio element to play the next file
     $( audio ).on( 'ended', myFunctionstopped );
     // set event handlers for the radio buttons used to change playback speed
-    $( ':radio[name=speed]' ).on( 'change', changeSpeed );
+    $( 'input[type="radio"][name="speed"]' ).on( 'click', changeSpeed );
     tekstiotsikko();
 });
 
