@@ -26,6 +26,11 @@ available in developing countries.
 
 This project is in an early stage of development. The player is not yet considered stable and thus is not ready for real world use.
 
+## Usage
+
+You can find the [installation instructions](https://github.com/Promppainen/Universal-Daisy-Player-Project/wiki/install)
+from the project's wiki.
+
 ## License
 
 This program is free software: you can redistribute it and/or modify
