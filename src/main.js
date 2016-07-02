@@ -22,6 +22,8 @@ $( function () {
     // set event handler for when a audio file is finished.
     // the handler will make the audio element to play the next file
     $( audio ).on( 'ended', myFunctionstopped );
+    // set event handler for when audio starts playing
+    $( audio ).on( 'playing', onPlaying );
     // set event handlers for the radio buttons used to change playback speed
     $( 'input[type="radio"][name="speed"]' ).on( 'click', changeSpeed );
     tekstiotsikko();
@@ -83,9 +85,6 @@ function myFunction(){
  teksti();
  tekstitef();
  
- // set playback speed always before starting to play since it is otherwise forgotten
- // at least on Safari when a new file starts playing
- audio.playbackRate = speed;
  audio.play();
  
  // remove this method as the play button handler
@@ -232,5 +231,12 @@ function changeSpeed() {
     // get the speed from the radio button pressed
     // it is used here and in the play event handler to ensure that the speed the user chose stays
     speed = $( this ).val();
+    audio.playbackRate = speed;
+}
+
+// event hanler for when audio starts playing
+function onPlaying() {
+    // set playback speed always  when starting to play since it is otherwise forgotten
+    // at least on Safari when a new file starts playing
     audio.playbackRate = speed;
 }
