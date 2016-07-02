@@ -228,9 +228,9 @@ function waitSeconds(iMilliSeconds) {
 
 // event handler when user changes playback speed with the radio buttons
 function changeSpeed() {
-    // get the speed from the radio button pressed
+    // get the speed from the radio button currently checked 
     // it is used here and in the play event handler to ensure that the speed the user chose stays
-    speed = $( this ).val();
+    speed = $( 'input[type="radio"][name="speed"]:checked' ).val();
     audio.playbackRate = speed;
 }
 
