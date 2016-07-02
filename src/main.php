@@ -25,16 +25,30 @@ function Daisykansiotarkistus ($tarkistettavakansio){
 
 
 	}
-
+// Main variables for script runtime
+// ini file for configuration 
 include "./ini.php";
+// variable $langfile below is from ini file above for localisation
 include "./".$langfile;
 
-// Main variables for script runtime
+
+// Basic ?bookdir querystring chehck function
+function qstringcheck ($inputstring){
+ $inputstring = str_replace("?php", "", $inputstring);
+ $inputstring = str_replace("?>", "", $inputstring);
+ return $inputstring;
+}
+
+
+
+
 
 // if for query string used or not to configure daisy book directory
 if (($querystring == "1") & ($_GET['bookdir'] != "")){
 
 $bookdir = $_GET['bookdir'];
+// Use function to chechk querystring from malicious tags
+$bookdir = qstringcheck ($bookdir);
 $kirjakansio = $bookdir;
 $kirjahttpkansio = $bookdir;
 } 
