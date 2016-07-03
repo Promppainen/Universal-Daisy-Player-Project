@@ -25,7 +25,7 @@ $( function () {
     // set event handler for when audio starts playing
     $( audio ).on( 'playing', onPlaying );
     // set event handlers for the radio buttons used to change playback speed
-    $( 'input[type="radio"][name="speed"]' ).on( 'click', changeSpeed );
+    $( '.speedselector' ).on( 'click', changeSpeed );
     tekstiotsikko();
 });
 
@@ -230,7 +230,7 @@ function waitSeconds(iMilliSeconds) {
 function changeSpeed() {
     // get the speed from the radio button currently checked and convert to number to make sure
     // it is used here and in the play event handler to ensure that the speed the user chose stays
-    speed = Number( $( 'input[type="radio"][name="speed"]:checked' ).val() );
+    speed = Number( $( '.speedselector:checked' ).val() );
     audio.playbackRate = speed;
 }
 
