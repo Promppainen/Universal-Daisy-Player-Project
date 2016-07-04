@@ -211,9 +211,12 @@ function myFunctionedellinenosio(){
 	tef--;
 	a = jakso[tef]; 
 	audio.src = bookcliptimesmp3[a];
-	audio.currentTime = bookcliptimes[a];
-	
-	myFunction();
+    var currentClipStart = bookcliptimes[a];
+    // set currenttime and start playing when browser is ready
+    $( audio ).on( 'canplay', function () {
+        audio.currentTime = currentClipStart;
+        myFunction();
+    });
 }
 
 }
