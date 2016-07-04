@@ -193,11 +193,11 @@ function myFunctionseuraavaosio(){
 	tef++;
 	a = jakso[tef]; 
 	audio.src = bookcliptimesmp3[a];
-	audio.currentTime = bookcliptimes[a];
-	
-	myFunction();
-
-
+    var currentClipSTart = bookcliptimes[a];
+    $( audio ).one( 'canplay', function () {
+        audio.currentTime = currentClipSTart;
+        myFunction();
+    });
 }
 
 function myFunctionedellinenosio(){
