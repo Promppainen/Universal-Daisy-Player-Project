@@ -64,10 +64,12 @@ function myFunctionstopped (){
  tef++;
  a = jakso[tef]; 
  audio.src = bookcliptimesmp3[a];
- audio.currentTime = bookcliptimes[a];
-	
- myFunction();
-
+ var currentClipStart = bookcliptimes[a];
+ // set the currenttime and start playing when the browser is ready to play
+ $( audio ).one( 'canplay', function () {
+     audio.currentTime = currentClipStart;
+     myFunction();
+ });
 }
 
 
