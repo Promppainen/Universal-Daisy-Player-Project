@@ -56,24 +56,25 @@ function myFunctiontimechange (){
  playhead = audio.currentTime;
 }
 
-
-
-
 function myFunctionstopped (){
-
  tef++;
- a = jakso[tef]; 
- audio.src = bookcliptimesmp3[a];
- var currentClipStart = bookcliptimes[a];
- // set the currenttime and start playing when the browser is ready to play
- $( audio ).one( 'canplay', function () {
-     audio.currentTime = currentClipStart;
-     myFunction();
- });
+ // start playing the file indicated by tef
+ changeFile();
 }
 
-
-
+// starts playing the file indicated by the global variable tef
+// this is used in event handlers when changing files based on user request (previous or next section)
+// or when current file ends
+function changeFile() {
+    a = jakso[tef];
+    audio.src = bookcliptimesmp3[a];
+    var currentClipStart = bookcliptimes[a];
+    // set the currenttime and start playing when the browser is ready to play
+    $( audio ).one( 'canplay', function () {
+        audio.currentTime = currentClipStart;
+        myFunction();
+    });
+}
 
 function myFunction(){
  if (a < jakso[tef] ){
@@ -191,13 +192,8 @@ function myFunctionseuraavaosio(){
 	playhead = a;
 
 	tef++;
-	a = jakso[tef]; 
-	audio.src = bookcliptimesmp3[a];
-    var currentClipSTart = bookcliptimes[a];
-    $( audio ).one( 'canplay', function () {
-        audio.currentTime = currentClipSTart;
-        myFunction();
-    });
+    // start playing the file indicated by tef
+    changeFile();
 }
 
 function myFunctionedellinenosio(){
@@ -209,14 +205,8 @@ function myFunctionedellinenosio(){
 	raita = "audio"+0;
 	playhead = a;
 	tef--;
-	a = jakso[tef]; 
-	audio.src = bookcliptimesmp3[a];
-    var currentClipStart = bookcliptimes[a];
-    // set currenttime and start playing when browser is ready
-    $( audio ).on( 'canplay', function () {
-        audio.currentTime = currentClipStart;
-        myFunction();
-    });
+    // start playing the file indicated by tef
+    changeFile();
 }
 
 }
