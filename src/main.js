@@ -69,11 +69,23 @@ function changeFile() {
     a = jakso[tef];
     audio.src = bookcliptimesmp3[a];
     var currentClipStart = bookcliptimes[a];
-    // set the currenttime and start playing when the browser is ready to play
-    $( audio ).one( 'canplay', function () {
+    try {
+        // try setting the currenttime for audio right away
+        // this doesn't work with Internet Explorer instead it throws an exception which 
+        // we will catch and deal with later
         audio.currentTime = currentClipStart;
         myFunction();
-    });
+    }
+    
+    catch (err) {
+        // did not manage to set the currenttime 
+        // set the currenttime and start playing when the browser is ready to play
+        // the canplay event doesn't work as we want on IoS so we cannot just use it in every case
+        $( audio ).one( 'canplay', function () {
+            audio.currentTime = currentClipStart;
+            myFunction();
+        });
+    }
 }
 
 function myFunction(){
