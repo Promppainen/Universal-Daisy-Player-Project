@@ -18,7 +18,7 @@ $( function () {
     // get button used to play and pause audio
     playButton = $( '#playButton' );
     // set the play / pause button to play audio when clicked
-    playButton.on( 'click', myFunction );
+    playButton.on( 'click', play );
     // set event handler for when a audio file is finished.
     // the handler will make the audio element to play the next file
     $( audio ).on( 'ended', stopped );
@@ -68,7 +68,7 @@ function changeFile() {
         // this doesn't work with Internet Explorer instead it throws an exception which 
         // we will catch and deal with later
         audio.currentTime = currentClipStart;
-        myFunction();
+        play();
     }
     
     catch (err) {
@@ -77,12 +77,12 @@ function changeFile() {
         // the canplay event doesn't work as we want on IoS so we cannot just use it in every case
         $( audio ).one( 'canplay', function () {
             audio.currentTime = currentClipStart;
-            myFunction();
+            play();
         });
     }
 }
 
-function myFunction(){
+function play(){
  if (a < jakso[tef] ){
   a = jakso[tef];
   tef--;
@@ -128,7 +128,7 @@ function pause(){
  // we next add it as the click event handler
  playButton.off( 'click' );
  // add the method that starts playback as the event handler for the button
- playButton.on( 'click', myFunction );
+ playButton.on( 'click', play );
  // change button text
  playButton.html( buttonTexts.play );
 }
@@ -157,7 +157,7 @@ function playNext() {
 
 
   if (a < jakso[tef+1]){
-  myFunction();
+  play();
   } else {stopped();}
   			}
 	
@@ -182,7 +182,7 @@ function playPrev() {
 		
  audio.src = bookcliptimesmp3[a];
  audio.currentTime = bookcliptimes[a]; 
- myFunction();
+ play();
 
   }
 }
