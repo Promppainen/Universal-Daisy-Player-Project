@@ -60,19 +60,8 @@ include "./main.php";
 
 <script src="main.js"></script>
 
-<link href="/style.css" rel="stylesheet" type="text/css">
-<link href="style.css" rel="stylesheet" type="text/css">
-<style type="text/css">
-h1 {
-	font-size: 20mm;
-}
-button {
-	font-size: medium;
-	font-style: normal;
-	font-weight: bold;
-	font-variant: normal;
-}
-</style>
+<link href="./style.css" rel="stylesheet" type="text/css">
+
 </head>
 
 <body>
