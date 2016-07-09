@@ -156,12 +156,12 @@ $go++; // lisätään yksi laskuriin
       
     </p>
 <h1 id="daisytitle"><?php echo $titles[1];?> </h1>
-    <button id="button" onClick="myFunctionedellinenosio()"accesskey="d"><?php echo $langprewsection;?></button>
+    <button id="button" onClick="playPrevSect()"accesskey="d"><?php echo $langprewsection;?></button>
     <button id="button" onClick="playPrev()" accesskey="r"><?php echo $langprew;?></button>
   <button id="playButton"  accesskey="p"><?php echo $langplay;?></button>
   <button id="button" onClick="stop()" accesskey="s"><?php echo $langstop;?> </button>
     <button id="button" onClick="playNext()" accesskey="f"><?php echo $langnext;?></button>
-    <button id="button" onClick="myFunctionseuraavaosio()"accesskey="g"><?php echo $langnextsection;?></button>
+    <button id="button" onClick="playNextSect()"accesskey="g"><?php echo $langnextsection;?></button>
 
 
 </p>

@@ -195,7 +195,7 @@ function playPrev() {
 
 	
 
-function playNextosio(){
+function playNextSect(){
 //audio = document.getElementById(raita);
 	playhead = audio.currentTime;
 	
@@ -208,8 +208,8 @@ function playNextosio(){
     changeFile();
 }
 
-function playPrevosio(){
-
+// plays the previous  book section
+function playPrevSect(){
 	if (tef !== 0){
 	//audio = document.getElementById(raita);
 	playhead = audio.currentTime;
