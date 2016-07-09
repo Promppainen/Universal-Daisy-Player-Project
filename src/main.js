@@ -107,7 +107,7 @@ function myFunction(){
  // this mehod is called when a new section is started
  playButton.off( 'click' );
  // add the method that pauses playback as the handler for play / pause button
- playButton.on( 'click', myFunction3 );
+ playButton.on( 'click', pause );
  // and change the button text
  playButton.html( buttonTexts.pause );
 }
@@ -116,7 +116,7 @@ function myFunction(){
 // called when the stop button is pressed. Stops the book playback and returns to the beginning of the book
 function stop(){	
  // pause audio and change the play / pause button to play button
- myFunction3();
+ pause();
  soita = 0;
  //raita = "audio"+soita;
  tef = 0;
@@ -126,7 +126,8 @@ function stop(){
  tekstiotsikko();
 }
 
-function myFunction3(){
+// pauses the audio playback. Called when pause pressed.
+function pause(){
  audio.pause();
  // remove  all click event handlers  from play pause button
  // this includes this method and possibly the play method which we want to make sure gets called only once when
