@@ -21,7 +21,7 @@ $( function () {
     playButton.on( 'click', myFunction );
     // set event handler for when a audio file is finished.
     // the handler will make the audio element to play the next file
-    $( audio ).on( 'ended', myFunctionstopped );
+    $( audio ).on( 'ended', stopped );
     // set event handler for when audio starts playing
     $( audio ).on( 'playing', onPlaying );
     // set event handlers for the radio buttons used to change playback speed
@@ -50,7 +50,7 @@ function tekstitef (){
 
 }
 
-function myFunctionstopped (){
+function stopped (){
  tef++;
  // start playing the file indicated by tef
  changeFile();
@@ -158,7 +158,7 @@ function playNext() {
 
   if (a < jakso[tef+1]){
   myFunction();
-  } else {myFunctionstopped();}
+  } else {stopped();}
   			}
 	
 
