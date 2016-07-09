@@ -171,7 +171,8 @@ function playNext() {
 	
 }
 
-function myFunctionedellinen() {
+// play previous audio clip.
+function playPrev() {
 	
  if (a !== 0){
  audio.pause();
@@ -207,7 +208,7 @@ function playNextosio(){
     changeFile();
 }
 
-function myFunctionedellinenosio(){
+function playPrevosio(){
 
 	if (tef !== 0){
 	//audio = document.getElementById(raita);
