@@ -26,10 +26,10 @@ $( function () {
     $( audio ).on( 'playing', onPlaying );
     // set event handlers for the radio buttons used to change playback speed
     $( '.speedselector' ).on( 'click', changeSpeed );
-    tekstiotsikko();
+    textTitle();
 });
 
-function tekstiotsikko (){
+function textTitle (){
 
  document.getElementById("daisytitle").textContent = titles[tef+1] ;
 
@@ -90,7 +90,7 @@ function play(){
  }
 //alert ("javascript toimii");
  audio = document.getElementById("audio0");
- tekstiotsikko();
+ textTitle();
  teksti();
  tekstitef();
  
@@ -117,7 +117,7 @@ function stop(){
  a = 0;
  audio.src = bookcliptimesmp3[a];
  audio.currentTime = 0;
- tekstiotsikko();
+ textTitle();
 }
 
 // pauses the audio playback. Called when pause pressed.
