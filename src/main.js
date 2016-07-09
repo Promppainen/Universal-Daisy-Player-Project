@@ -50,12 +50,6 @@ function tekstitef (){
 
 }
 
-
-
-function myFunctiontimechange (){
- playhead = audio.currentTime;
-}
-
 function myFunctionstopped (){
  tef++;
  // start playing the file indicated by tef
