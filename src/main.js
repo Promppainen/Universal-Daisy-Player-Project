@@ -36,7 +36,7 @@ function textTitle (){
 }
 
 
-function teksti (){
+function text(){
 
  document.getElementById("tekstia").textContent = a ;
 
@@ -44,9 +44,9 @@ function teksti (){
 
 
 
-function tekstitef (){
+function textTef (){
 
- document.getElementById("tekstitef").textContent = jakso[tef] ;
+ document.getElementById("textTef").textContent = jakso[tef] ;
 
 }
 
@@ -91,8 +91,8 @@ function play(){
 //alert ("javascript toimii");
  audio = document.getElementById("audio0");
  textTitle();
- teksti();
- tekstitef();
+ text();
+ textTef();
  
  audio.play();
  

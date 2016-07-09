@@ -188,7 +188,7 @@ $go++; // lisätään yksi laskuriin
 <br>
 <p id="tekstia">nyt soitetaan </p>
 <br>
-<p id="tekstitef" > <?php echo $langsectioninfo;?> </p>
+<p id="textTef" > <?php echo $langsectioninfo;?> </p>
 <br>
 
 
