@@ -160,7 +160,7 @@ $go++; // lisätään yksi laskuriin
     <button id="button" onClick="myFunctionedellinen()" accesskey="r"><?php echo $langprew;?></button>
   <button id="playButton"  accesskey="p"><?php echo $langplay;?></button>
   <button id="button" onClick="stop()" accesskey="s"><?php echo $langstop;?> </button>
-    <button id="button" onClick="myFunctionseuraava()"accesskey="f"><?php echo $langnext;?></button>
+    <button id="button" onClick="playNext()" accesskey="f"><?php echo $langnext;?></button>
     <button id="button" onClick="myFunctionseuraavaosio()"accesskey="g"><?php echo $langnextsection;?></button>
 
 

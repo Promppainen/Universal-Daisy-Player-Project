@@ -139,7 +139,7 @@ function pause(){
  playButton.html( buttonTexts.play );
 }
 
-function myFunctionseuraava() {
+function playNext() {
 
  if (soita !== 1000) {
 	
@@ -194,7 +194,7 @@ function myFunctionedellinen() {
 
 	
 
-function myFunctionseuraavaosio(){
+function playNextosio(){
 //audio = document.getElementById(raita);
 	playhead = audio.currentTime;
 	
