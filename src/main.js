@@ -113,10 +113,8 @@ function myFunction(){
 }
 
 
-function myFunction2(){
-	
-//audio = document.getElementById(raita);
-	
+// called when the stop button is pressed. Stops the book playback and returns to the beginning of the book
+function stop(){	
  // pause audio and change the play / pause button to play button
  myFunction3();
  soita = 0;
