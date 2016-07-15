@@ -166,7 +166,7 @@ $go++; // lisätään yksi laskuriin
 
 </p>
 
-<h2>Playback speed</h2>
+<h2><?php echo $langplaybackspeed;?></h2>
 
 <p>
 <input id="half" class="speedselector" type="radio" name="speed" value="0.5">

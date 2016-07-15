@@ -9,6 +9,7 @@ $langpause = "Pause";
 $langnext = "Next";
 $langnextsection = "NextSect";
 
+$langplaybackspeed = "Playback speed";
 #navigation information like section numbers
 
 $langsectioninfo = "section";

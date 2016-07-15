@@ -9,6 +9,7 @@ $langpause = "Pause";
 $langnext = "Seuraava";
 $langnextsection = "Seuraava osio";
 
+$langplaybackspeed = "Toistonopeus";
 #navigation information like section numbers
 
 $langsectioninfo = "Osio: ";
