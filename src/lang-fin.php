@@ -3,13 +3,14 @@
 
 $langprewsection = "Edellinen osio";
 $langprew = "edellinen";
-$langplay = "Play";
-$langstop = "Stop";
-$langpause = "Pause";
+$langplay = "Toista";
+$langstop = "Pysäytä";
+$langpause = "Tauko";
 $langnext = "Seuraava";
 $langnextsection = "Seuraava osio";
 
 $langplaybackspeed = "Toistonopeus";
+
 #navigation information like section numbers
 
 $langsectioninfo = "Osio: ";
